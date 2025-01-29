@@ -1,17 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./normalize.css" />
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <title>Portfolio</title>
-  </head>
-  <body>
-    <script src="./index.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./normalize.css" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <div class="container-wide">
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__burger-menu">
+          <button class="burger-menu__button">
+            <span class="burger-menu__line"></span>
+          </button>
+        </div>
+      </nav>
+        <aside class="social-links header__social-links">
+          <span class="social-links__title">Социальные сети</span>
+          <span class="social-links__dash"></span>
+          <ul class="social-links__list">
+            <li class="social-links__item">
+              <a href="https://github.com/" target="_blank" class="social-links__link github" aria-label="github"></a>
+            </li>
+            <li class="social-links__item">
+              <a href="https://www.instagram.com/" target="_blank" class="social-links__link instagram"
+                aria-label="instagram"></a>
+            </li>
+            <li class="social-links__item">
+              <a href="https://www.facebook.com/" target="_blank" class="social-links__link facebook
+                  aria-label=" facebook"></a>
+            </li>
+          </ul>
+
+        </aside>
+        <article class="presentation header__presentation">
+          <h4 class="presentation__title drop-circle">Меня зовут Александра Смит</h4>
+          <h1 class="presentation__description">Я web-разработчик
+            из города Москва</h1>
+            <div class="presentation__reference">
+              <button class="presentation__button button">портфолио</button>
+              <button class="presentation__button button button-transparent">про меня</button>
+            </div>
+        </article>
+    </header>
+    <div class="container">
+      <main class="main"></main>
+      <footer class="footer"></footer>
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
 </html>
