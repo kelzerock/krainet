@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("./src/fonts/Poppins-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./src/fonts/Poppins-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary-black: #000;
+  --primary-white: #fff;
+  --primary-yellow: #ffa501;
+  --transparent-white: #ffffffbf;
+  --font-family-base: "Poppins", sans-serif;
+  --container-width: 1140px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+h5 {
+  color: #000;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.text {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.text-big {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+body {
+  background-color: var(--primary-white);
+  font-family: var(--font-family-base);
+  color: var(--color-light-gray);
+  font-size: 16px;
+  line-height: normal;
+}
