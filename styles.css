@@ -329,6 +329,9 @@ ul {
 .instagram {
   background: url("./src/img/svg/Instagram.svg") no-repeat center/cover;
 }
+.telegram {
+  background: url("./src/img/svg/Telegram.svg") no-repeat center/cover;
+}
 
 .icon-list {
   display: flex;
@@ -416,6 +419,14 @@ ul {
     height: 3px;
     background-color: var(--primary-yellow);
     transform: translateX(-50%);
+  }
+}
+
+.drop-line--right {
+  &::after {
+    bottom: -3px;
+    left: 0;
+    transform: none;
   }
 }
 
@@ -577,5 +588,120 @@ ul {
   .card-description {
     max-width: 380px;
     margin-top: 5px;
+  }
+}
+
+.footer {
+  margin: 120px auto;
+  padding-left: 52px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 70px;
+
+  .footer__image {
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .footer__title {
+      margin: 5px 0 0 10px;
+    }
+
+    .footer__subtitle {
+      margin-top: 5px;
+    }
+
+    .footer__description {
+      margin-top: 20px;
+    }
+
+    .footer__icon-list {
+      margin-top: 20px;
+      column-gap: 23px;
+
+      a {
+        width: 30px;
+      }
+    }
+  }
+}
+
+.form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 30px;
+  max-width: 585px;
+
+  & * {
+    box-sizing: border-box;
+  }
+
+  .form__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 25px;
+    row-gap: 30px;
+  }
+
+  .form__fieldset {
+    position: relative;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 500;
+    max-width: 270px;
+
+    .form__input {
+      padding: 14px 20px;
+      outline: none;
+      width: 100%;
+    }
+
+    .form__label {
+      position: absolute;
+      padding: 0 8px;
+      top: -8px;
+      left: 10px;
+      background-color: var(--primary-white);
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .form__fieldset-text {
+    position: relative;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 500;
+    width: 99%;
+
+    .form__textarea {
+      padding: 14px 20px;
+      outline: none;
+      width: 100%;
+    }
+
+    .form__label {
+      position: absolute;
+      padding: 0 8px;
+      top: -8px;
+      left: 10px;
+      background-color: var(--primary-white);
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
   }
 }

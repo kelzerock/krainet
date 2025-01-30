@@ -48,3 +48,20 @@ window.addEventListener("resize", () => {
     setMinWidth(popupNavBlock, getWindowSizeAboveInLeft(MAX_WIDTH) + WIDTH_NAV);
   }
 });
+
+//form
+//https://fakestoreapi.com/docs
+
+const form = document.querySelector(".footer__form");
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    fetch("https://fakestoreapi.com/products", {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((json) => console.log(json));
+  });
+}
