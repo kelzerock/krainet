@@ -707,6 +707,7 @@ ul {
       outline: none;
       width: 100%;
       resize: none;
+      height: 190px;
     }
 
     .form__label {
@@ -750,5 +751,126 @@ ul {
 
   .footer__image {
     display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 26px;
+    line-height: normal;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  .header {
+    min-height: 640px;
+    background-position: 55%;
+    justify-content: flex-start;
+
+    .nav {
+      right: 20px;
+    }
+
+    .header__presentation {
+      margin: 205px 10px 0;
+
+      .presentation__description {
+        max-width: 320px;
+      }
+    }
+  }
+
+  .about-me {
+    display: block;
+    margin: 40px auto 0;
+    position: relative;
+    width: 300px;
+    height: 340px;
+    overflow: hidden;
+
+    .about-me__image {
+      position: absolute;
+      top: -55px;
+      left: 0px;
+      width: 300px;
+    }
+  }
+
+  .experience {
+    padding: 0 10px;
+    .experience__subtitle {
+      margin: 26px auto 20px;
+    }
+
+    .experience__wrapper {
+      margin-top: 33px;
+      row-gap: 55px;
+    }
+  }
+
+  .card__wrapper:last-of-type {
+    margin-top: 20px;
+  }
+
+  .footer {
+    padding: 0 10px;
+
+    .footer-wrapper {
+      .footer__subtitle {
+        margin-top: 25px;
+      }
+
+      .footer__description {
+        margin-top: 33px;
+
+        &:last-of-type {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    .form {
+      margin-top: 30px;
+      align-items: center;
+
+      .form__fieldset {
+        max-width: none;
+        width: 100%;
+      }
+
+      .form__textarea {
+        height: 145px;
+      }
+    }
+  }
+
+  .drop-line {
+    &::after {
+      bottom: -15px;
+    }
+  }
+
+  .popup-nav {
+    .popup-nav__navigation {
+      max-width: 250px;
+      align-items: center;
+      padding: 21vh 0 0 0;
+      row-gap: 18vh;
+      .popup-nav__list {
+        margin: 0;
+      }
+      .popup-nav__icon-list {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    background: url("./src/img/Background_1.png") no-repeat center/cover;
   }
 }

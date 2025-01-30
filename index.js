@@ -1,5 +1,6 @@
 const MAX_WIDTH = 1920;
 const WIDTH_NAV = 345;
+const WIDTH_NAV_MIN = 250;
 
 const selectors = {
   burgerMenuButton: ".burger-menu__button",
@@ -31,7 +32,14 @@ function togglePopup(event) {
     target.closest("a")
   ) {
     toggleClassActive();
-    setMinWidth(popupNavBlock, getWindowSizeAboveInLeft(MAX_WIDTH) + WIDTH_NAV);
+    if (window.innerWidth < 767) {
+      setMinWidth(popupNavBlock, WIDTH_NAV_MIN);
+    } else {
+      setMinWidth(
+        popupNavBlock,
+        getWindowSizeAboveInLeft(MAX_WIDTH) + WIDTH_NAV
+      );
+    }
   }
 }
 
@@ -46,6 +54,9 @@ function setMinWidth(node, minWidth) {
 window.addEventListener("resize", () => {
   if (window.innerWidth > MAX_WIDTH) {
     setMinWidth(popupNavBlock, getWindowSizeAboveInLeft(MAX_WIDTH) + WIDTH_NAV);
+  }
+  if (window.innerWidth < 767) {
+    setMinWidth(popupNavBlock, WIDTH_NAV_MIN);
   }
 });
 
