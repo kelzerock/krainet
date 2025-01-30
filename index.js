@@ -1,21 +1,37 @@
 const MAX_WIDTH = 1920;
 const WIDTH_NAV = 345;
 
-const burgerMenuButton = document.querySelector(".burger-menu__button");
-const popupNav = document.querySelector(".popup-nav");
-const popupNavBlock = document.querySelector(".popup-nav__navigation");
-burgerMenuButton.addEventListener("click", togglePopup);
-popupNav.addEventListener("click", togglePopup);
+const selectors = {
+  burgerMenuButton: ".burger-menu__button",
+  popupNav: ".popup-nav",
+  popupNavBlock: ".popup-nav__navigation",
+  closeButton: ".popup-nav__button-close",
+};
 
-function togglePopup() {
+const burgerMenuButton = document.querySelector(selectors.burgerMenuButton);
+const popupNav = document.querySelector(selectors.popupNav);
+const popupNavBlock = document.querySelector(selectors.popupNavBlock);
+const closeButton = document.querySelector(selectors.closeButton);
+burgerMenuButton.addEventListener("click", (e) => togglePopup(e));
+popupNav.addEventListener("click", (e) => togglePopup(e));
+
+function togglePopup(event) {
+  const { target } = event;
   if (!burgerMenuButton && !popupNav && !popupNavBlock) return;
-  if (burgerMenuButton.classList.contains("burger-menu__button--active")) {
-    popupNav.classList.remove("popup-nav--active");
-    burgerMenuButton.classList.remove("burger-menu__button--active");
-  } else {
+
+  function toggleClassActive() {
+    popupNav.classList.toggle("popup-nav--active");
+    burgerMenuButton.classList.toggle("burger-menu__button--active");
+    document.body.classList.toggle("lock");
+  }
+  if (
+    target.closest(selectors.burgerMenuButton) === burgerMenuButton ||
+    target === popupNav ||
+    target.closest(selectors.closeButton) === closeButton ||
+    target.closest("a")
+  ) {
+    toggleClassActive();
     setMinWidth(popupNavBlock, getWindowSizeAboveInLeft(MAX_WIDTH) + WIDTH_NAV);
-    popupNav.classList.add("popup-nav--active");
-    burgerMenuButton.classList.add("burger-menu__button--active");
   }
 }
 
