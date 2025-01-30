@@ -177,12 +177,12 @@ ul {
   .popup-nav__navigation {
     min-width: 345px;
     background-color: var(--primary-yellow);
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
     height: 100%;
+    display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    row-gap: 300px;
     transform: translateX(-100%);
     transition: transform 0.5s ease-in-out;
     position: relative;
@@ -231,7 +231,7 @@ ul {
       row-gap: 15px;
       justify-content: flex-start;
       align-items: flex-start;
-      margin: 140px 0 0 75px;
+      margin: 140px 105px 0 0;
     }
 
     .popup-nav__item {
@@ -257,6 +257,9 @@ ul {
         border-radius: 50%;
         border: solid 1px var(--primary-black);
       }
+    }
+    .popup-nav__icon-list {
+      margin-right: 128px;
     }
   }
 }
@@ -295,27 +298,39 @@ ul {
   }
 
   .social-links__list {
-    display: flex;
     flex-direction: column-reverse;
-    gap: 15px;
-    justify-content: flex-start;
-    align-items: center;
 
     .social-links__link {
       display: block;
       width: 20px;
       aspect-ratio: 1;
-
-      &.facebook {
-        background: url("./src/img/svg/Facebook.svg") no-repeat center/cover;
-      }
-      &.github {
-        background: url("./src/img/svg/Github.svg") no-repeat center/cover;
-      }
-      &.instagram {
-        background: url("./src/img/svg/Instagram.svg") no-repeat center/cover;
-      }
     }
+  }
+}
+
+.facebook {
+  background: url("./src/img/svg/Facebook.svg") no-repeat center/cover;
+}
+
+.github {
+  background: url("./src/img/svg/Github.svg") no-repeat center/cover;
+}
+
+.instagram {
+  background: url("./src/img/svg/Instagram.svg") no-repeat center/cover;
+}
+
+.icon-list {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: flex-start;
+  align-items: center;
+
+  .icon-list__link {
+    display: block;
+    width: 20px;
+    aspect-ratio: 1;
   }
 }
 
