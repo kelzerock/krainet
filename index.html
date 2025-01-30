@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+    <div class="container-wide">
+      <div class="popup-nav">
+        <nav class="popup-nav__navigation">
+          <button class="popup-nav__button-close"></button>
+          <ul class="popup-nav__list">
+            <li class="popup-nav__item">
+              <a href="#about-me" class="popup-nav__link">про меня</a>
+            </li>
+            <li class="popup-nav__item">
+              <a href="#experience" class="popup-nav__link">мой опыт</a>
+            </li>
+            <li class="popup-nav__item">
+              <a href="#skills" class="popup-nav__link">мои навыки</a>
+            </li>
+            <li class="popup-nav__item">
+              <a href="#portfolio" class="popup-nav__link">мои работы</a>
+            </li>
+            <li class="popup-nav__item">
+              <a href="#price" class="popup-nav__link">прайс-лист</a>
+            </li>
+            <li class="popup-nav__item">
+              <a href="#contacts" class="popup-nav__link">контакты</a>
+            </li>
+          </ul>
+          <ul class="popup-nav__icon-list icon-list">
+            <li class="icon-list__item">
+              <a
+                href="https://github.com/"
+                target="_blank"
+                class="icon-list__link github"
+                aria-label="github"
+              ></a>
+            </li>
+            <li class="icon-list__item">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="icon-list__link instagram"
+                aria-label="instagram"
+              ></a>
+            </li>
+            <li class="icon-list__item">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="icon-list__link facebook"
+                aria-label="facebook"
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <header class="header">
+        <nav class="nav">
+          <div class="nav__burger-menu">
+            <button class="burger-menu__button">
+              <span class="burger-menu__line"></span>
+            </button>
+          </div>
+        </nav>
+        <aside class="social-links header__social-links">
+          <span class="social-links__title">Социальные сети</span>
+          <span class="social-links__dash"></span>
+          <ul class="social-links__list icon-list">
+            <li class="social-links__item">
+              <a
+                href="https://github.com/"
+                target="_blank"
+                class="social-links__link github"
+                aria-label="github"
+              ></a>
+            </li>
+            <li class="social-links__item">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="social-links__link instagram"
+                aria-label="instagram"
+              ></a>
+            </li>
+            <li class="social-links__item">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="social-links__link facebook"
+                aria-label="facebook"
+              ></a>
+            </li>
+          </ul>
+        </aside>
+        <article class="presentation header__presentation">
+          <h4 class="presentation__title drop-circle">
+            Меня зовут Александра Смит
+          </h4>
+          <h1 class="presentation__description">
+            Я web-разработчик из города Москва
+          </h1>
+          <div class="presentation__reference">
+            <button class="presentation__button button">портфолио</button>
+            <button class="presentation__button button button-transparent">
+              про меня
+            </button>
+          </div>
+        </article>
+      </header>
+      <div class="container">
+        <main class="main">
+          <div class="about-me" id="about-me">
+            <img class="about-me__image" src="./src/img/Photo.png" alt="girl" />
+          </div>
+          <div class="experience" id="experience">
+            <h4 class="experience__title drop-circle drop-circle--center">
+              опыт
+            </h4>
+            <h2 class="experience__subtitle drop-line">Чем я буду полезна</h2>
+            <div class="experience__wrapper">
+              <article class="experience__card card">
+                <h3 class="card__main-title">образование</h3>
+                <div class="card__wrapper">
+                  <div class="card__title-info">
+                    <span class="card-icon">
+                      <img
+                        class="card-img"
+                        src="./src/img/svg/University.svg"
+                        alt="university"
+                      />
+                    </span>
+                    <div class="card__title-wrapper">
+                      <h5 class="card__title">МГТУ им. Н. Э. Баумана</h5>
+                      <p class="card__subtitle text">
+                        Диплом магистра | Москва (2014-2020)
+                      </p>
+                    </div>
+                  </div>
+                  <p class="card-description text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmo.
+                  </p>
+                </div>
+                <div class="card__wrapper">
+                  <div class="card__title-info">
+                    <span class="card-icon">
+                      <img
+                        class="card-img"
+                        src="./src/img/svg/Courses.svg"
+                        alt="university"
+                      />
+                    </span>
+                    <div class="card__title-wrapper">
+                      <h5 class="card__title">Udemy</h5>
+                      <p class="card__subtitle text">Курсы по Web-разработке</p>
+                    </div>
+                  </div>
+                  <p class="card-description text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmo.
+                  </p>
+                </div>
+              </article>
+              <article class="experience__card card">
+                <h3 class="card__main-title">Опыт работы</h3>
+                <div class="card__wrapper">
+                  <div class="card__title-info">
+                    <span class="card-icon">
+                      <img
+                        class="card-img"
+                        src="./src/img/svg/seo.svg"
+                        alt="computer"
+                      />
+                    </span>
+                    <div class="card__title-wrapper">
+                      <h5 class="card__title">Front-End Developer</h5>
+                      <p class="card__subtitle text">
+                        EPAM | Москва (2018-2019)
+                      </p>
+                    </div>
+                  </div>
+                  <p class="card-description text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmo.
+                  </p>
+                </div>
+                <div class="card__wrapper">
+                  <div class="card__title-info">
+                    <span class="card-icon">
+                      <img
+                        class="card-img"
+                        src="./src/img/svg/designer.svg"
+                        alt="university"
+                      />
+                    </span>
+                    <div class="card__title-wrapper">
+                      <h5 class="card__title">UI/UX Designer</h5>
+                      <p class="card__subtitle text">
+                        Squad Team | Москва (2018)
+                      </p>
+                    </div>
+                  </div>
+                  <p class="card-description text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmo.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </main>
+        <footer class="footer" id="contacts">
+          <img class="footer__image" src="./src/img/Photo.png" alt="girl" />
+          <div class="footer-wrapper">
+            <h4 class="footer__title drop-circle">контакты</h4>
+            <h2 class="footer__subtitle drop-line drop-line--right">
+              Свяжитесь со мной
+            </h2>
+            <p class="footer__description text-big">
+              Любым удобным для вас способом:
+            </p>
+            <ul class="footer__icon-list icon-list">
+              <li class="icon-list__item">
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  class="icon-list__link facebook"
+                  aria-label="facebook"
+                ></a>
+              </li>
+              <li class="icon-list__item">
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  class="icon-list__link instagram"
+                  aria-label="instagram"
+                ></a>
+              </li>
+              <li class="icon-list__item">
+                <a
+                  href="https://web.telegram.org/"
+                  target="_blank"
+                  class="icon-list__link telegram"
+                  aria-label="telegram"
+                ></a>
+              </li>
+            </ul>
+            <p class="footer__description text-big">
+              Или оставьте ваши данные и я сама вам напишу:
+            </p>
+            <form
+              class="footer__form form"
+              action=""
+              method="post"
+              data-js-form
+              novalidate
+            >
+              <div class="form__wrapper">
+                <fieldset class="form__fieldset">
+                  <label class="form__label" for="name">ваше имя</label>
+                  <input
+                    class="form__input"
+                    type="text"
+                    id="name"
+                    name="firstname"
+                    placeholder="Иван"
+                    required
+                  />
+                  <span data-field-errors></span>
+                </fieldset>
+                <fieldset class="form__fieldset">
+                  <label class="form__label" for="email">ваша почта</label>
+                  <input
+                    class="form__input"
+                    type="text"
+                    pattern="[^@\s]+@[^@\s]+"
+                    id="email"
+                    name="email"
+                    placeholder=""
+                    required
+                  />
+                  <span data-field-errors></span>
+                </fieldset>
+              </div>
+              <fieldset class="form__fieldset-text">
+                <label class="form__label" for="message">ваше сообщение</label>
+                <textarea
+                  class="form__textarea"
+                  id="message"
+                  name="message"
+                  placeholder=""
+                ></textarea>
+              </fieldset>
+              <button type="submit" class="button">Отправить сообщение</button>
+              <span data-field-success class="text"></span>
+            </form>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
