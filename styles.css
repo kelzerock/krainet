@@ -469,6 +469,10 @@ ul {
   justify-content: flex-start;
 }
 
+.about-me {
+  display: none;
+}
+
 .experience {
   margin-top: 120px;
   display: flex;
@@ -487,6 +491,8 @@ ul {
   .experience__wrapper {
     margin-top: 60px;
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
     flex-direction: row;
     justify-content: space-around;
   }
@@ -719,5 +725,30 @@ ul {
   [data-field-success] {
     color: green;
     margin-top: -15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__social-links {
+    display: none;
+  }
+
+  .header__presentation {
+    margin: 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__image {
+    display: none;
   }
 }
