@@ -597,10 +597,11 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: flex-start;
   column-gap: 70px;
 
   .footer__image {
-    max-width: 400px;
+    width: 400px;
     height: auto;
     object-fit: cover;
   }
@@ -619,7 +620,7 @@ ul {
     }
 
     .footer__description {
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
     .footer__icon-list {
@@ -638,7 +639,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  row-gap: 30px;
+  row-gap: 25px;
   max-width: 585px;
 
   & * {
@@ -659,11 +660,19 @@ ul {
     font-size: 12px;
     font-weight: 500;
     max-width: 270px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .form__input {
       padding: 14px 20px;
       outline: none;
       width: 100%;
+    }
+
+    [data-field-errors] {
+      color: red;
     }
 
     .form__label {
@@ -680,6 +689,7 @@ ul {
   }
 
   .form__fieldset-text {
+    border: none;
     position: relative;
     padding: 0;
     font-size: 12px;
@@ -690,6 +700,7 @@ ul {
       padding: 14px 20px;
       outline: none;
       width: 100%;
+      resize: none;
     }
 
     .form__label {
@@ -703,5 +714,10 @@ ul {
         text-transform: capitalize;
       }
     }
+  }
+
+  [data-field-success] {
+    color: green;
+    margin-top: -15px;
   }
 }

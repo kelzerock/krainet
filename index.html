@@ -225,7 +225,7 @@
             </div>
           </div>
         </main>
-        <footer class="footer">
+        <footer class="footer" id="contacts">
           <img class="footer__image" src="./src/img/Photo.png" alt="girl" />
           <div class="footer-wrapper">
             <h4 class="footer__title drop-circle">контакты</h4>
@@ -264,7 +264,13 @@
             <p class="footer__description text-big">
               Или оставьте ваши данные и я сама вам напишу:
             </p>
-            <form class="footer__form form" action="" method="post">
+            <form
+              class="footer__form form"
+              action=""
+              method="post"
+              data-js-form
+              novalidate
+            >
               <div class="form__wrapper">
                 <fieldset class="form__fieldset">
                   <label class="form__label" for="name">ваше имя</label>
@@ -274,17 +280,22 @@
                     id="name"
                     name="firstname"
                     placeholder="Иван"
+                    required
                   />
+                  <span data-field-errors></span>
                 </fieldset>
                 <fieldset class="form__fieldset">
                   <label class="form__label" for="email">ваша почта</label>
                   <input
                     class="form__input"
-                    type="email"
+                    type="text"
+                    pattern="[^@\s]+@[^@\s]+"
                     id="email"
                     name="email"
                     placeholder=""
+                    required
                   />
+                  <span data-field-errors></span>
                 </fieldset>
               </div>
               <fieldset class="form__fieldset-text">
@@ -294,10 +305,11 @@
                   id="message"
                   name="message"
                   placeholder=""
-                  rows="13"
+                  rows="12"
                 ></textarea>
               </fieldset>
               <button type="submit" class="button">Отправить сообщение</button>
+              <span data-field-success class="text"></span>
             </form>
           </div>
         </footer>
